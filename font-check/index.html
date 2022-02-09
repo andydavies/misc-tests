@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Font Check</title>
+    <style>
+    * {
+        font-family: sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <h1>Checks whether a limited list of fonts is installed locally</h1>
+    <script>
+        const fonts = ['1em Roboto', '1em Courier', '1em Helvetica', '1em Ubuntu'];
+        
+        fonts.forEach(element => {
+            let installed = document.fonts.check(element) ? "installed" : "not installed";
+            document.write(`${element} : ${installed} <br>`)
+            
+        });
+    </script>
+</body>
+</html>
